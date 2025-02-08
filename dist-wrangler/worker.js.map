@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "sources": ["../node_modules/.pnpm/htmlrewriter@0.0.12/node_modules/htmlrewriter/cloudflare.js", "../index.js", "../worker.js"],
+  "sourceRoot": "dist-wrangler",
+  "sourcesContent": ["// https://github.com/cloudflare/workers-sdk/blob/ff8603b6e1320d5c136712b8100e86c552eade46/packages/wrangler/src/deployment-bundle/bundle.ts#L351\n\nconst GlobalHtmlRewriter = HTMLRewriter\nexport { GlobalHtmlRewriter as HTMLRewriter }\n", "import { HTMLRewriter } from 'htmlrewriter';\n\nexport async function repro() {\n\tconsole.log('reprooooooo\\n\\n\\n');\n\n\tconst rewrittenResponse = new HTMLRewriter()\n\t\t.on('body', {\n\t\t\telement(element) {\n        console.log('appending');\n\t\t\t\telement.append('<p><p>\uD83D\uDC49<p></p></p></p>', { html: true });\n\t\t\t},\n\t\t})\n\t\t.transform(new Response('<html><meta charset=\"UTF-8\"><body></body>'));\n\n\tconst text = await rewrittenResponse.text();\n  console.log('xxx', text);\n  return text;\n}", "import { repro } from './index.js';\n\nexport default {\n  fetch: async () => {\n    return new Response(await repro());\n  }\n}"],
+  "mappings": ";;;;AAEA,IAAM,qBAAqB;;;ACA3B,eAAsB,QAAQ;AAC7B,UAAQ,IAAI,mBAAmB;AAE/B,QAAM,oBAAoB,IAAI,mBAAa,EACzC,GAAG,QAAQ;AAAA,IACX,QAAQ,SAAS;AACZ,cAAQ,IAAI,WAAW;AAC3B,cAAQ,OAAO,kCAA2B,EAAE,MAAM,KAAK,CAAC;AAAA,IACzD;AAAA,EACD,CAAC,EACA,UAAU,IAAI,SAAS,2CAA2C,CAAC;AAErE,QAAM,OAAO,MAAM,kBAAkB,KAAK;AACzC,UAAQ,IAAI,OAAO,IAAI;AACvB,SAAO;AACT;AAfsB;;;ACAtB,IAAO,iBAAQ;AAAA,EACb,OAAO,YAAY;AACjB,WAAO,IAAI,SAAS,MAAM,MAAM,CAAC;AAAA,EACnC;AACF;",
+  "names": []
+}

@@ -6,7 +6,8 @@
   "module": "index.js",
   "scripts": {
     "test-wrangler": "wrangler dev",
-    "test-node": "node node.js"
+    "test-node": "node node.js",
+    "debug-wrangler-output": "wrangler publish --dry-run --outdir dist-wrangler"
   },
   "keywords": [],
   "author": "",
