@@ -1,0 +1,20 @@
+{
+  "name": "htmlrewriter-crash-repro",
+  "version": "1.0.0",
+  "description": "",
+  "type":"module",
+  "module": "index.js",
+  "scripts": {
+    "test-wrangler": "wrangler dev",
+    "test-node": "node cli.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "htmlrewriter": "^0.0.12"
+  },
+  "devDependencies": {
+    "wrangler": "^3.107.3"
+  }
+}
