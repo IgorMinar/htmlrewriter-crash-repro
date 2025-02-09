@@ -1,4 +1,5 @@
-import { HTMLRewriter } from 'htmlrewriter';
+//import { HTMLRewriter } from 'htmlrewriter';
+import { HTMLRewriter } from '@worker-tools/html-rewriter/base64';
 
 export async function repro() {
 	console.log('reprooooooo\n\n\n');
