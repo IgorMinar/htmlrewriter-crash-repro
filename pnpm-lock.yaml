@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       htmlrewriter:
-        specifier: ^0.0.12
-        version: 0.0.12
+        specifier: IgorMinar/htmlrewriter#fix-emoji-crash
+        version: https://codeload.github.com/IgorMinar/htmlrewriter/tar.gz/b94c137c8f82d6cd20956fdef28c730cdd5a0d8f
     devDependencies:
       wrangler:
         specifier: ^3.107.3
@@ -267,8 +267,9 @@ packages:
   glob-to-regexp@0.4.1:
     resolution: {integrity: sha512-lkX1HJXwyMcprw/5YUZc2s7DrpAiHB21/V+E1rHUrVNokkvB6bqMzT0VfV6/86ZNabt1k14YOIaT7nDvOX3Iiw==}
 
-  htmlrewriter@0.0.12:
-    resolution: {integrity: sha512-Tw+wORUlNL9+JQCIo7J4SuX/T3M1xRAC/0XaifnRPLHCX95jbZy/0CI06n7BhuFQJhSdNA7ZoxnStJmF31FZRw==}
+  htmlrewriter@https://codeload.github.com/IgorMinar/htmlrewriter/tar.gz/b94c137c8f82d6cd20956fdef28c730cdd5a0d8f:
+    resolution: {tarball: https://codeload.github.com/IgorMinar/htmlrewriter/tar.gz/b94c137c8f82d6cd20956fdef28c730cdd5a0d8f}
+    version: 0.0.12
 
   magic-string@0.25.9:
     resolution: {integrity: sha512-RmF0AsMzgt25qzqqLc1+MbHmhdx0ojF2Fvs4XnOqz2ZOBXzzkEwc/dJQZCYHAn7v1jbVOjAZfK8msRn4BxO4VQ==}
@@ -549,7 +550,7 @@ snapshots:
 
   glob-to-regexp@0.4.1: {}
 
-  htmlrewriter@0.0.12: {}
+  htmlrewriter@https://codeload.github.com/IgorMinar/htmlrewriter/tar.gz/b94c137c8f82d6cd20956fdef28c730cdd5a0d8f: {}
 
   magic-string@0.25.9:
     dependencies:

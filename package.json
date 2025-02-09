@@ -13,7 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "htmlrewriter": "^0.0.12"
+    "htmlrewriter": "IgorMinar/htmlrewriter#fix-emoji-crash"
   },
   "devDependencies": {
     "wrangler": "^3.107.3"
